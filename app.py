@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from utils import check
 app=Flask(__name__)
 
@@ -6,9 +6,13 @@ app=Flask(__name__)
 def hello():
     return render_template("form.html")
 
-@app.route("/authenticate")
-def auth:
-    return check(request.form)
+@app.route("/authenticate/", methods =['POST'])
+def auth():
+    if check.check(request.form):
+        return render_template("accept.html")
+    else:
+        return render_template("deny.html")
+
 if __name__=='__main__':
     app.debug=True
     app.run()

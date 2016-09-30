@@ -1,2 +1,2 @@
-def check(s1, s2):
-    return s1 == 'user' and s2 == 'password'
+def check(d):
+    return d["user"] == 'user' and d["password"] == 'password'
