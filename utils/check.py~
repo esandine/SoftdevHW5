@@ -1,2 +1,19 @@
-def check(s1, s2):
-    return s1 == 'user' and s2 == 'password'
+def load(filename):
+    instream = open(filename, 'r') 
+    content = instream.readlines() 
+    instream.close()
+    return content
+
+def split(L):
+    list=L.split(',')
+    i = 0
+    while i < len(list):
+        dict[list[i]]=list[i+1]
+        i+=2
+    return dict
+        
+if __name__=='__main__':
+    print split(load("../data/data.csv"))
+#def check(d):
+    
+    #return d["user"] == 'user' and d["password"] == 'password
