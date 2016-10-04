@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <form action="/authenticate" method = "POST">
+  <form action="/authenticate/" method = "POST">
     <input type = "text" name = "user">
     <input type = "password"name = "password">
     <input type = "submit">

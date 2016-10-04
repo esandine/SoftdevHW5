@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <form action="/authenticate/" method = "POST">
-    <input type = "text" name = "user">
-    <input type = "password"name = "password">
-    <input type = "submit">
-  </form>
+  <title>Login Page</title>
+  <body>
+    Login:
+    <form action="/authenticate/" method = "POST">
+      <input type = "text" name = "user">
+      <input type = "password"name = "password">
+      <input type = "submit">
+    </form>
+    Create new account:
+    <form action="/register/" method = "POST">
+      <input type = "text" name = "user">
+      <input type = "password"name = "password">
+      <input type = "submit">
+    </form>
+  </body>
 </html>

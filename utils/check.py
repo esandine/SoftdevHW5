@@ -26,6 +26,13 @@ def check(d):
         return hash(d["password"]) == dict[d["user"]]
     return false
 
+def register(d):
+    outstream = open("data/data.csv",'a')
+    outstream.write(d["user"]+","+hash(d["password"])+",")
+    outstream.close()
+
 if __name__=='__main__':
+    register("Ely","Sandine")
     print split(load("../data/data.csv"))
+    
 
