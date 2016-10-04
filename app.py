@@ -9,9 +9,10 @@ def hello():
 @app.route("/authenticate/", methods =['POST'])
 def auth():
     if check.check(request.form):
-        return render_template("accept.html",status="ACCEPTED")
+        acc="ACCEPTED"
     else:
-        return render_template("accept.html",status="DENIED")
+        acc="DENIED"
+    return render_template("accept.html",status=acc)
 
 @app.route("/register/", methods = ['POST'])
 def reg():
