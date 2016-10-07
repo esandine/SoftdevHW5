@@ -20,6 +20,10 @@ def split(L):
         i+=2
     return dict
 
+def isUser(d):
+    dict = split(load("data/data.csv"))
+    return d["user"] in dict.keys()
+
 def check(d):    
     dict = split(load("data/data.csv"))
     if d["user"] in dict.keys():
@@ -27,9 +31,12 @@ def check(d):
     return false
 
 def register(d):
-    outstream = open("data/data.csv",'a')
-    outstream.write(d["user"]+","+hash(d["password"])+",")
-    outstream.close()
+    if isUser(d):
+        print "Username already taken"
+    else:
+        outstream = open("data/data.csv",'a')
+        outstream.write(d["user"]+","+hash(d["password"])+",")
+        outstream.close()
 
 if __name__=='__main__':
     register("Ely","Sandine")
