@@ -1,1 +1,5 @@
-{status}
+{{status}}
+Log Out:
+<form action="/logout/" method = "POST">
+  <input type = "submit" name = "logout">
+</form>
